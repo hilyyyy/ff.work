@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻宝游戏</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="game-container">
+        <h1>欢迎来到寻宝游戏！</h1>
+        <button id="startBtn">开始寻宝</button>
+        <div id="animation-container">
+            <div id="animation"></div>
+        </div>
+        <div id="map">
+            <!-- 各个区域的位置 -->
+            <div class="location" id="beach" data-name="沙滩" style="top: 50px; left: 200px; width: 120px;"></div>
+            <div class="location" id="forest" data-name="树林" style="top: 200px; left: 100px; width: 120px;"></div>
+            <div class="location" id="cave" data-name="山洞" style="top: 350px; left: 50px; width: 120px;"></div>
+            <div class="location" id="ancient-city" data-name="古城" style="top: 100px; left: 350px; width: 120px;"></div>
+            <div class="location" id="shipwreck" data-name="藏宝船" style="top: 300px; left: 350px; width: 120px;"></div>
+            <div class="location" id="library" data-name="图书馆" style="top: 150px; left: 450px; width: 120px;"></div>
+            <div class="location" id="temple" data-name="神庙" style="top: 400px; left: 500px; width: 120px;"></div>
+            <div class="location" id="guard-post" data-name="守卫岗" style="top: 250px; left: 550px; width: 120px;"></div>
+
+            <!-- 提示信息 -->
+            <div class="tip" id="beach-tip">你现在进入了沙滩区域！</div>
+            <div class="tip" id="forest-tip">你现在进入了树林区域！</div>
+            <div class="tip" id="cave-tip">你现在进入了山洞区域！</div>
+            <div class="tip" id="ancient-city-tip">你现在进入了古城区域！</div>
+            <div class="tip" id="shipwreck-tip">你现在进入了藏宝船区域！</div>
+            <div class="tip" id="library-tip">你现在进入了图书馆！</div>
+            <div class="tip" id="temple-tip">你现在进入了神庙！</div>
+            <div class="tip" id="guard-post-tip">你现在进入了守卫岗！</div>
+        </div>
+        <div id="result"></div>
+        <div id="treasure-image"></div>  <!-- 显示宝藏图片 -->
+    </div>
+
+<!-- 在页面中添加播放/暂停按钮 -->
+<button id="music-toggle-btn">暂停音乐</button>
+
+<!-- 添加背景音乐元素 -->
+<audio id="background-music" loop>
+    <source src="background-music.mp3" type="audio/mp3">
+    您的浏览器不支持音频标签。
+</audio>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
